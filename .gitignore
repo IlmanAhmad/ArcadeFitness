@@ -1,0 +1,7 @@
+# Specific files #
+##################
+gym/migrations
+gym/__pycache__
+ArcadeFitness/__pycache__
+ArcadeFitness/settings.py
+db.sqlite3
