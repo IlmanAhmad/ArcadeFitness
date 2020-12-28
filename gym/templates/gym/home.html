@@ -1,51 +1,35 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Fitness</title>
-
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'gym/home.css' %}">
-<style>
-    body {
-        font-family: 'Baloo Bhai 2', cursive;
-        color: white;
-        margin: 0px;
-        padding: 0px;
-        height: 1950px;
-        width: 100%;
-        background-image: url({% static 'gym/bg.jpg' %});
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
-
 <body>
-    <header>
+    <div class="container">
         <div class="left">
             <img src="{% static 'gym/logo.jpg' %}" alt="">
             <h1>Arcade Fitness</h1>
         </div>
         <div class="mid">
-            <ul class="navbar">
-                <li class="nav"><a href="#">Home</a></li>
-                <li class="nav"><a href="#">Diet Plan</a></li>
-                <li class="nav"><a href="#">About</a></li>
-                <li class="nav"><a href="#">Health Calculator</a></li>
-            </ul>
+            <div class="navbar">
+                <ul class="nav">
+                    <li class="nav"><a href="#">Home</a></li>
+                    <li class="nav"><a href="#">Diet Plans</a></li>
+                    <li class="nav"><a href="#">Fitness Calculator</a></li>
+                    <li class="nav"><a href="#">About us</a></li>
+                </ul>
+            </div>
         </div>
         <div class="right">
-            <button class="btn">Sign up</button>
+            <button class="btn">Register</button>
             <button class="btn">Login</button>
         </div>
-    </header>
-    
-    <div class="container">
-        <h1>Contact us for information</h1>
+    </div>
+    <div class="containerm">
+        <h1>Contact Us</h1>
         <form action="#">
             <div class="form-group">
                 <!-- <Lable for="name">Name</Lable> -->
@@ -68,6 +52,6 @@
             </div>
         </form>
     </div>
+    
 </body>
-
 </html>

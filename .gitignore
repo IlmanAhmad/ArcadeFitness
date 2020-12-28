@@ -2,6 +2,8 @@
 ##################
 gym/migrations
 gym/__pycache__
+gym/templates/gym/home_backup.html
+gym/static/gym/home_backup.css
 ArcadeFitness/__pycache__
 ArcadeFitness/settings.py
 db.sqlite3
