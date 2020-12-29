@@ -5,5 +5,6 @@ app_name = 'gym'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('fitnesscalc/', views.fitnesscalc, name='fitnesscalc'),
     
 ]

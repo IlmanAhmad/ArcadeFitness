@@ -1,57 +1,29 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcade Fitness</title>
-</head>
-<link rel="stylesheet" href="{% static 'gym/home.css' %}">
-<body>
-    <div class="container">
-        <div class="left">
-            <img src="{% static 'gym/logo.jpg' %}" alt="">
-            <h1>Arcade Fitness</h1>
+{% extends 'gym/basic.html' %}
+{% block title %}Arcade Fitness{% endblock %}
+
+{% block body %}
+<div class="containerm">
+    <h1>Contact Us</h1>
+    <form action="#">
+        <div class="form-group">
+            <!-- <Lable for="name">Name</Lable> -->
+            <input type="text" id="name" name="name" class="name" placeholder="Enter your name">
         </div>
-        <div class="mid">
-            <div class="navbar">
-                <ul class="nav">
-                    <li class="nav"><a href="#">Home</a></li>
-                    <li class="nav"><a href="#">Diet Plans</a></li>
-                    <li class="nav"><a href="#">Fitness Calculator</a></li>
-                    <li class="nav"><a href="#">About us</a></li>
-                </ul>
-            </div>
+        <div class="form-group">
+            <!-- <Lable for="email">Email</Lable> -->
+            <input type="email" id="email" name="email"placeholder="Enter your email">
         </div>
-        <div class="right">
-            <button class="btn">Register</button>
-            <button class="btn">Login</button>
+        <div class="form-group">
+            <!-- <Lable for="phone">Phone</Lable> -->
+            <input type="tel" id="phone" name="phone"placeholder="Enter your phone">
         </div>
-    </div>
-    <div class="containerm">
-        <h1>Contact Us</h1>
-        <form action="#">
-            <div class="form-group">
-                <!-- <Lable for="name">Name</Lable> -->
-                <input type="text" id="name" name="name" class="name" placeholder="Enter your name">
-            </div>
-            <div class="form-group">
-                <!-- <Lable for="email">Email</Lable> -->
-                <input type="email" id="email" name="email"placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-                <!-- <Lable for="phone">Phone</Lable> -->
-                <input type="tel" id="phone" name="phone"placeholder="Enter your phone">
-            </div>
-            <div class="form-group">
-                <!-- <Lable for="area">Area</Lable> -->
-                <input type="text" id="area" name="area"placeholder="Enter your area">
-            </div>
-            <div class="form-group">
-            <button class="btn" type="submit" id="submit">Submit</button>
-            </div>
-        </form>
-    </div>
-    
-</body>
-</html>
+        <div class="form-group">
+            <!-- <Lable for="area">Area</Lable> -->
+            <input type="text" id="area" name="area"placeholder="Enter your area">
+        </div>
+        <div class="form-group">
+        <button class="btn" type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
