@@ -1,13 +1,20 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
 </head>
+
 <link rel="stylesheet" href="{% static 'gym/home.css' %}">
 <link rel="stylesheet" href="{% static 'gym/fitnesscalc.css' %}">
+<link rel="stylesheet" href="{% static 'gym/dietplans.css' %}">
+{% block js %}
+
+{% endblock %}
+
 
 <body>
     <div class="container">
@@ -19,7 +26,7 @@
             <div class="navbar">
                 <ul class="nav">
                     <li class="nav"><a href="/home">Home</a></li>
-                    <li class="nav"><a href="#">Diet Plans</a></li>
+                    <li class="nav"><a href="/home/dietplan/">Diet Plans</a></li>
                     <li class="nav"><a href="/home/fitnesscalc/">Fitness Calculator</a></li>
                     <li class="nav"><a href="#">About us</a></li>
                 </ul>
@@ -31,7 +38,9 @@
         </div>
     </div>
     {% block body %}{% endblock %}
-    
-    
+
+
 </body>
+
+
 </html>

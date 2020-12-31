@@ -1,0 +1,132 @@
+{% extends 'gym/basic.html' %}
+{% block title %}Diet Plans{% endblock %}
+{% block js %}
+<script>
+    function myFunction() {
+        document.getElementById("wgframe").style.display = "block";
+    }
+</script>
+{% endblock %}
+{% block body %}
+<div class="containersidenav">
+    <div class="sidenavbar">
+        <ul class="sidenav">
+            <li class="nav"><a href="#" id="wg" onclick="myFunction()">Weight Gain</a></li>
+            <li class="nav" id="wl"><a href="#">Weight Loss</a></li>
+            <li class="nav" id="ts"><a href="#">Training Schedule</a></li>
+        </ul>
+    </div>
+</div>
+<div class="imagebox">
+    <img src="/static/gym/photo1.jpg" alt="">
+    <img src="/static/gym/photo2.jpg" alt="">
+    <div>
+        <img src="/static/gym/photo3.jpg" alt="">
+        <img src="/static/gym/photo4.jpg" alt="">
+    </div>
+</div>
+<div id="wgframe">
+    <div class="textbox">
+
+    </div>
+
+    <div class="tabledata">
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>3 Scrambled Eggs</td>
+                    <td>221</td>
+                </tr>
+                <tr>
+                    <td>3 slices Wheat Toast, buttered</td>
+                    <td>497</td>
+                </tr>
+                <tr>
+                    <td>Glass of Orange Juice</td>
+                    <td>118</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>105</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>100g Chicken Breast (cooked), 2 pieces lean Back Bacon (grilled)</td>
+                    <td>303</td>
+                </tr>
+                <tr>
+                    <td>1 Avocado, 80g Mixed Salad Leaves, 50g Tomatoes, Cucumber</td>
+                    <td>354</td>
+                </tr>
+                <tr>
+                    <td>Dressing: 1 Tbsp Olive Oil, Vinegar, Seasoning</td>
+                    <td>119</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>25g Unsalted Nuts</td>
+                    <td>160</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>3 slices Meatloaf (1 inch each)</td>
+                    <td>603</td>
+                </tr>
+                <tr>
+                    <td>200g Mashed Potato</td>
+                    <td>166</td>
+                </tr>
+                <tr>
+                    <td>80g Peas, 2 Carrots</td>
+                    <td>112</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>30g Dark Chocolate</td>
+                    <td>189</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

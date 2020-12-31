@@ -11,3 +11,8 @@ def fitnesscalc(request):
     """redirects to fitness calculator page"""
     
     return render(request, 'gym/fitnesscalc.html')
+
+def dietplan(request):
+    """redirects to diet plan page"""
+    
+    return render(request, 'gym/dietplan.html')
