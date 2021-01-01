@@ -2,8 +2,20 @@
 {% block title %}Diet Plans{% endblock %}
 {% block js %}
 <script>
-    function myFunction() {
+    function myFunctionwg() {
+        document.getElementById("wlframe").style.display = "none";
+        document.getElementById("trframe").style.display = "none";
         document.getElementById("wgframe").style.display = "block";
+    }
+    function myFunctionwl() {
+        document.getElementById("wgframe").style.display = "none";
+        document.getElementById("trframe").style.display = "none";
+        document.getElementById("wlframe").style.display = "block";
+    }
+    function myFunctionts() {
+        document.getElementById("wgframe").style.display = "none";
+        document.getElementById("wlframe").style.display = "none";
+        document.getElementById("trframe").style.display = "block";
     }
 </script>
 {% endblock %}
@@ -11,9 +23,9 @@
 <div class="containersidenav">
     <div class="sidenavbar">
         <ul class="sidenav">
-            <li class="nav"><a href="#" id="wg" onclick="myFunction()">Weight Gain</a></li>
-            <li class="nav" id="wl"><a href="#">Weight Loss</a></li>
-            <li class="nav" id="ts"><a href="#">Training Schedule</a></li>
+            <li class="nav"><a href="#" id="wg" onclick="myFunctionwg()">Weight Gain</a></li>
+            <li class="nav"><a href="#" id="wl" onclick="myFunctionwl()">Weight Loss</a></li>
+            <li class="nav"><a href="#" id="ts" onclick="myFunctionts()">Training Schedule</a></li>
         </ul>
     </div>
 </div>
@@ -124,6 +136,267 @@
                 <tr>
                     <td>30g Dark Chocolate</td>
                     <td>189</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="wlframe">
+    <div class="textbox">
+
+    </div>
+
+    <div class="tabledata">
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>Cucumber Detox Water(1 glass)</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Oats Porridge in Skimmed Milk(1 bowl)</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Mixed Nuts</td>
+                    <td>50</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>Skimmed Milk Paneer(100 grams)</td>
+                    <td>55</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>Mixed Vegetable Salad(1 katori)</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Dal(1 katori)Gajar Matar Sabzi(1 katori)</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>Roti (1 roti/chapati)</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>Cut Fruits(1 cup)Buttermilk(1 glass)</td>
+                    <td>50</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>Tea with Less Sugar and Milk(1 teacup)</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Mixed Vegetable Salad(1 katori)</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Dal(1 katori)Lauki Sabzi(1 katori)</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                    <td>Mixed Vegetable Salad(1 katori)</td>
+                    <td>75</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="trframe">
+    <div class="textbox">
+
+    </div>
+
+    <div class="tabledata">
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Muscle Group</th>
+                    <th>Excercise</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Rest</th>
+                </tr>
+                <tr>
+                    <td>Chest</td>
+                    <td>Incline Dumbbell</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Chest</td>
+                    <td>Incline Flys</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Chest</td>
+                    <td>Dips</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Triceps</td>
+                    <td>Triceps Pushdown</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Muscle Group</th>
+                    <th>Excercise</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Rest</th>
+                </tr>
+                <tr>
+                    <td>Legs</td>
+                    <td>Front Squat</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Legs</td>
+                    <td>Good Morning</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Legs</td>
+                    <td>Seated Calf Raises</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Abs</td>
+                    <td>Hanging Crunches</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Abs</td>
+                    <td>Cable Crunch</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Muscle Group</th>
+                    <th>Excercise</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Rest</th>
+                </tr>
+                <tr>
+                    <td>Shoulders</td>
+                    <td>Military Press</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Shoulders</td>
+                    <td>Lateral Raises</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Traps</td>
+                    <td>Reverse Flys</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+        <table BORDER=2>
+            <tbody>
+                <tr>
+                    <th>Muscle Group</th>
+                    <th>Excercise</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Rest</th>
+                </tr>
+                <tr>
+                    <td>Back</td>
+                    <td>Bent Over Rows</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Back</td>
+                    <td>Lat Pulldown</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Biceps</td>
+                    <td>Dumbbell Curls</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>30</td>
                 </tr>
             </tbody>
         </table>

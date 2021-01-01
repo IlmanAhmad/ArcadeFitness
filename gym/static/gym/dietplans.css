@@ -1,3 +1,4 @@
+/* setting up sidenav properties */
 .containersidenav {
     display: flex;
 }
@@ -21,6 +22,10 @@
     
 }
 
+.sidenav li a:hover {
+    color: white;
+}
+/* setting up imagebox properties */
 .imagebox {
     border: 3px solid white;
     border-radius: 10px;
@@ -37,7 +42,7 @@
     width: 860px;
     height: 780px;
 }
-
+/* setting up table properties */
 .tabledata table{
     margin: 15px auto;
 }
@@ -50,8 +55,7 @@
     border-color: gray   ;
     width: 750px;
 }
-
-#wgframe {
+/* setting up display properties for diets and training schedule */
+#wgframe, #wlframe, #trframe {
     display:none;
 }
-
