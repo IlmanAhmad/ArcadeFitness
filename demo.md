@@ -1,6 +1,6 @@
 # Homepage
-![title](/images/home.png)
+![title](/Images/home.png)
 # Diet Plans Page
-![title](/images/dietplan.png)
+![title](/Images/dietplan.png)
 # Fitness Calculators page
-![title](/images/fitnesscalc.png)
+![title](/Images/fitnesscalc.png)
