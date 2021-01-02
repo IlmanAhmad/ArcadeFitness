@@ -28,7 +28,7 @@
 
 .containercalorie{
     position: absolute;
-    top: 330px;
+    top: 350px;
     right: 0px;
     border: 2px solid white;
     margin: 128px;
@@ -44,4 +44,15 @@
     padding: 2px 2px;
     width: 310px;
     border-radius: 10px;
+}
+
+output {
+    display: flex;
+    width: 100%;
+}
+
+.outputvalue {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
 }
