@@ -12,6 +12,31 @@ def fitnesscalc(request):
     
     return render(request, 'gym/fitnesscalc.html')
 
+def calcalc(request):
+    """calculation logic of calorie calculator"""
+    if request.method == "POST":
+        gender = request.POST.get('gender', '')
+        age = int(request.POST.get('age', ''))
+        height = int(request.POST.get('height', ''))
+        weight = int(request.POST.get('weight', ''))
+        cactivity = float(request.POST.get('cactivity', ''))
+
+        if gender == 'male':
+            bmr = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)
+            calculatedcalorie = bmr * cactivity
+            calorie = "{:.2f}".format(calculatedcalorie)
+            params = {'calorie': calorie}
+            return render(request, 'gym/fitnesscalc.html', params)
+        else:
+            bmr = 655.1 + (9.563 * weight) + (1.85 * height) - (4.676 * age)
+            calculatedcalorie = bmr * cactivity
+            calorie = "{:.2f}".format(calculatedcalorie)
+            params = {'calorie': calorie}
+            print(bmr, calorie)
+            return render(request, 'gym/fitnesscalc.html', params)
+    else:
+        return HttpResponse("404-Bad request")
+
 def bmicalc(request):
     """calculation logic of bmi calculator"""
     if request.method == "POST":
@@ -48,3 +73,5 @@ def dietplan(request):
     """redirects to diet plan page"""
     
     return render(request, 'gym/dietplan.html')
+
+

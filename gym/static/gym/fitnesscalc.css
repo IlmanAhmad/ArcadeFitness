@@ -1,3 +1,4 @@
+/* bmi calculator box properties */
 .containerbmi{
     position: absolute;
     top: 20px;
@@ -25,10 +26,10 @@
     width: 10px;
 }
 
-
+/* calorie calculator box propties */
 .containercalorie{
     position: absolute;
-    top: 350px;
+    top: 370px;
     right: 0px;
     border: 2px solid white;
     margin: 128px;
@@ -56,3 +57,20 @@ output {
     justify-content: center;
     align-items: center;
 }
+
+.outputvalue > span {
+    padding: 2px 3px;
+}
+
+.outputvalue > span a{
+    color: grey;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 0px 4px;
+    text-decoration: none;
+}
+
+.outputvalue > span a:hover {
+    color: white;
+}
+
