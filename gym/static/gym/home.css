@@ -101,3 +101,31 @@ body{
     padding: 2px 2px;
     width: 310px;
 }
+
+.alert {
+    padding: 20px;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+    margin: auto 47px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
