@@ -1,0 +1,19 @@
+{% extends 'gym/basic.html' %}
+{% block title %}Log in{% endblock %}
+{% block body %}
+<div class="containerm">
+    <h1>Enter your details</h1>
+    <form action="/home/handlelogin/" method="POST"> {% csrf_token %}
+        <div class="form-group">
+            <input type="text" id="name" name="name" class="name" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <button class="btn" type="submit" id="submit">Login</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

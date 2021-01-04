@@ -1,5 +1,9 @@
 from django.shortcuts import render, redirect, HttpResponse
-from django.contrib import messages
+from django.contrib import messages, sessions
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
 from gym.models import Contact
 
 
@@ -9,9 +13,44 @@ def home(request):
 
     return render(request, 'gym/home.html')
 
+def loginpage(request):
+    """redirects to login page"""
+
+    return render(request, 'gym/login.html')
+
+def handlelogin(request):
+    """login authentication"""
+    if request.method == "POST":
+        user_name = request.POST.get('name', '')
+        password = request.POST.get('password', '')
+
+        user = authenticate(username=user_name, password=password)
+        if user is not None:
+            request.session['name'] = request.POST.get('name', '')
+            login(request, user)
+            messages.success(
+                request, "Your login request is successfull.")
+            return redirect("gym:home")
+        else:
+            messages.error(
+                request, "Invalid credentials, Please try again.")
+            return redirect("gym:login")
+    
+
+
+    return render(request, 'gym/login.html')
+
+@login_required
+def handlelogout(request):
+    """redirects to home page post logout"""
+    logout(request)
+    messages.success(request, "Your have successfully logged out")
+    return redirect("gym:home")
+
+
 
 def contactus(request):
-    """redirects to home page"""
+    """redirects to home page post submitting contact us request"""
     if request.method == "POST":
         name = request.POST.get('name', '')
         email = request.POST.get('email', '')

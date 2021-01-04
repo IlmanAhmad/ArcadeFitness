@@ -10,5 +10,8 @@ urlpatterns = [
     path('bmicalc/', views.bmicalc, name='bmicalc'),
     path('calcalc/', views.calcalc, name='calcalc'),
     path('contactus/', views.contactus, name='contactus'),
+    path('handlelogin/', views.handlelogin, name='handlelogin'),
+    path('login/', views.loginpage, name='login'),
+    path('logout/', views.handlelogout, name='logout'),
     
 ]

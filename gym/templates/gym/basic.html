@@ -38,8 +38,12 @@
             {% endfor %}
         </div>
         <div class="right">
+            {% if user.is_authenticated %}
+            <button type="button" class="btn"><a href="/home/logout/">Log Out</a></button>
+            {% else %}
             <button class="btn">Register</button>
-            <button class="btn">Login</button>
+            <button type="button" class="btn"><a href="/home/login/">Log in</a></button>
+            {% endif %}
         </div>
     </div>
 

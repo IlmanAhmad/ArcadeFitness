@@ -41,10 +41,6 @@ body{
     text-decoration: none;
 }
 
-.nav li a:hover{
-    color: white;
-}
-
 .right{
     position: absolute;
     top: 34px;
@@ -62,7 +58,12 @@ body{
     font-size: 20px;
 }
 
-.btn:hover{
+.btn a{
+    color: grey;
+    text-decoration: none;
+}
+
+.btn:hover, .btn a:hover, .nav li a:hover{
     color: white;
 }
 
