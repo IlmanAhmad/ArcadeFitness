@@ -14,10 +14,12 @@ def home(request):
 
     return render(request, 'gym/home.html')
 
+
 def loginpage(request):
     """redirects to login page"""
 
     return render(request, 'gym/login.html')
+
 
 def handlelogin(request):
     """login authentication"""
@@ -36,10 +38,9 @@ def handlelogin(request):
             messages.error(
                 request, "Invalid credentials, Please try again.")
             return redirect("gym:login")
-    
-
 
     return render(request, 'gym/login.html')
+
 
 @login_required
 def handlelogout(request):
@@ -47,7 +48,6 @@ def handlelogout(request):
     logout(request)
     messages.success(request, "Your have successfully logged out")
     return redirect("gym:home")
-
 
 
 def contactus(request):
@@ -66,16 +66,20 @@ def contactus(request):
     else:
         return HttpResponse("404-Bad request")
 
+
 @staff_member_required
 def dataextract(request):
     """ contact us form data extract utility"""
     contactdata = Contact.objects.all()
     for i in range(len(contactdata)):
-        df = pd.DataFrame(contactdata.values()) # Creating a dataframe for final audit datasheet
-        df.to_excel('./data.xlsx', index=False) # Writing data into excel output
-    
-    return redirect("gym:home")
+        # Creating a dataframe for final audit datasheet
+        df = pd.DataFrame(contactdata.values())
+        # Writing data into excel output
+        df.to_excel('./data.xlsx', index=False)
+    messages.success(
+        request, "Your request has been extracted in filename data.xlsx.")
 
+    return redirect("gym:home")
 
 
 def fitnesscalc(request):
@@ -147,3 +151,9 @@ def dietplan(request):
     """redirects to diet plan page"""
 
     return render(request, 'gym/dietplan.html')
+
+
+def aboutus(request):
+    """redirects to about us page"""
+
+    return render(request, 'gym/aboutus.html')

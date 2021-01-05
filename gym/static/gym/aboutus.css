@@ -1,0 +1,16 @@
+img {
+    max-width: 250px;
+    max-height: 300px;
+}
+
+.about {
+    width: 30%;
+    margin: auto;
+    color: red;
+}
+
+.about p {
+    font-size: 20px;
+    
+}
+
