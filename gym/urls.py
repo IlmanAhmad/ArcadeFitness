@@ -13,5 +13,6 @@ urlpatterns = [
     path('handlelogin/', views.handlelogin, name='handlelogin'),
     path('login/', views.loginpage, name='login'),
     path('logout/', views.handlelogout, name='logout'),
+    path('data/', views.dataextract, name='data'),
     
 ]

@@ -27,6 +27,9 @@
                     <li class="nav"><a href="/home/dietplan/">Diet Plans</a></li>
                     <li class="nav"><a href="/home/fitnesscalc/">Fitness Calculator</a></li>
                     <li class="nav"><a href="#">About us</a></li>
+                    {% if user.is_superuser %}
+                    <li class="nav"><a href="/home/data/">Data extract</a></li>
+                    {% endif %}
                 </ul>
             </div>
             {% for message in messages %}

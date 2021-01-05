@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from gym.models import Contact
+import pandas as pd
 
 
 # Create your views here.
@@ -64,6 +65,17 @@ def contactus(request):
         return redirect("gym:home")
     else:
         return HttpResponse("404-Bad request")
+
+@staff_member_required
+def dataextract(request):
+    """ contact us form data extract utility"""
+    contactdata = Contact.objects.all()
+    for i in range(len(contactdata)):
+        df = pd.DataFrame(contactdata.values()) # Creating a dataframe for final audit datasheet
+        df.to_excel('./data.xlsx', index=False) # Writing data into excel output
+    
+    return redirect("gym:home")
+
 
 
 def fitnesscalc(request):
